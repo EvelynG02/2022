@@ -1,0 +1,212 @@
+
+  details summary > * { 
+    display: inline;
+  }
+
+  details > summary {
+    cursor: pointer;
+  }
+  
+  details > summary > * {
+    display: inline;
+  }
+  
+  details > div {
+    margin: 0;
+    padding: 0rem;
+    border: 0px;
+  }
+
+  details {
+    margin: 0rem;
+  }
+  summary {
+    list-style-image: url(/svg/com3\ \(3\).svg);
+  }
+  summary::-webkit-details-marker {
+    background: url(/svg/com3\ \(3\).svg);
+  }
+  .summaryp 
+  {  font-size: 18px;
+    color:rgba(88,56,117,1);
+    font-family: 'Noto Serif', sans-serif;
+
+  }
+  ul {font-size: 18px;
+    color:rgba(88,56,117,1);
+    font-family: 'Noto Serif', sans-serif;
+    text-align: left;
+    list-style-type: circle;
+
+  }
+  
+
+
+.grid-container {
+    border: 2px solid rgb(221, 192, 244);
+     display: grid;
+     grid-template-columns: auto auto auto;
+   background-color:  rgba(88,56,117,1);
+   padding: 15px;
+   gap: 15px;
+   margin: 0px;
+ 
+ }
+ .grid-item {
+   border:0px dotted rgb(70, 13, 116);
+  background-color: rgb(221, 192, 244);
+   padding: 15px;
+   font-size: 30px;
+   text-align: center;
+   font-family: 'Lucida Sans';
+   
+ }
+ body {
+  background: rgb(194,166,219);
+ background: linear-gradient(0deg, rgba(194,166,219,1) 20%, rgba(88,56,117,1) 90%);
+ }
+  .svgmedium {
+  display: inline-flex;
+  align-self: center;
+  }
+ .heading {
+ text-align: center;
+ font-size: 60px;
+ font-family: 'Noto Serif Bengali', serif;
+ color:  rgba(214,206,221,255);
+ margin: 0px;
+ padding: 0px;
+ gap: 0px;
+ display: inline-flex;
+ align-self: center;
+ align-content: center;
+ }
+ .heading3 {
+  text-align: center;
+  font-size: 60px;
+  font-family:'Noto Serif Bengali', serif;
+  color: rgba(214,206,221,255);
+  margin: 0px;
+  padding: 0px;
+  gap: 0px;
+  display: inline-flex;
+ align-self: center;
+  }
+
+ .heading2 {
+  font-size: 50px;
+  text-align: center;
+  color:rgba(88,56,117,1);
+  text-decoration-color: whitesmoke;
+  font-family: 'Noto Serif Bengali', serif;
+  font-weight: bold;
+
+ }
+ .menu {
+  font-family: 'Noto Serif', sans-serif;
+  text-align: center;
+  font-size: 50px;
+  color: rgb(194,166,219);
+ }
+
+
+
+@media (max-width: 600px) {
+  .grid-item
+  {
+    display: block;
+  }
+}
+table { 
+	width: 500px; 
+	border-collapse: collapse; 
+	margin:20px auto;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) { 
+	background: rgb(194,166,219);; 
+	}
+  tr:nth-of-type(even) { 
+    background: rgb(194,166,219);; 
+    }
+
+  td {  
+	border: 3px solid rgb(221, 192, 244) ;
+  font-size: 18px;
+  color:rgba(88,56,117,1);
+  font-family: 'Noto Serif', sans-serif;
+  
+	padding: 15px;
+  }
+  
+
+th { 
+  background-color: rgb(105, 116, 103); 
+	color: rgba(238,224,250,255); 
+	font-weight: bold; 
+  font-size: 22px;
+  border: 0px solid #ffffff;
+  font-family: 'Noto Serif Bengali', serif;
+  text-align: center;
+  
+	padding: 15px;
+	}
+.strainname {
+  text-align: left;
+}
+
+
+
+
+/* taken from codepnen user Andor Nagy for screen responsive table
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table { 
+	  	width: 100%; 
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	
+	td { 
+		/* Behave  like a "row" */
+		
+      border: 3px solid rgb(221, 192, 244);
+		position: relative;
+		padding-left: 50%; 
+	}
+
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 16px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: rgba(88,56,117,1);
+		font-weight: bold;
+	}
+
+}
